@@ -7,7 +7,7 @@
 #define FPS_TARGET 120
 
 // do not touch anything below
-// unless you know what you're doing
+// unless you know what you're doing (i know what i am doing)
 
 #ifdef WIN32
 #error You must build in x64
@@ -26,7 +26,7 @@ std::string GamePath{};
 bool VSyncEnable = false;
 int FpsValue = FPS_TARGET;
 
-// didnt made this pattern scan - c+p'd from somewhere
+// didnt make this pattern scan myself - c+p'd from somewhere
 uintptr_t PatternScan(void* module, const char* signature)
 {
     static auto pattern_to_byte = [](const char* pattern) {
@@ -293,7 +293,7 @@ int main(int argc, char** argv)
     std::string ProcessPath = GamePath;
     std::string ProcessDir{};
 
-    printf("FPS Unlocker v1.4.2\n");
+    printf("FPS Unlocker v1.5.0\n");
     printf("Game: %s\n\n", ProcessPath.c_str());
     ProcessDir = ProcessPath.substr(0, ProcessPath.find_last_of("\\"));
 
@@ -353,7 +353,7 @@ int main(int argc, char** argv)
     // calculate where vsync value is stored
     address = PatternScan(mem, "E8 ? ? ? ? 8B E8 49 8B 1E");
     uintptr_t pvsync = 0;
-    if (address)
+    if (address) // if adress is found add an offset
     {
         uintptr_t ppvsync = 0;
         uintptr_t rip = address;

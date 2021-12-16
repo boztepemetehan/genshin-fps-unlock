@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+.vs/unlockfps/v16/Browse.VC.opendb
+.vs/unlockfps/v16/Browse.VC.db
+.vs/unlockfps/v16/Browse.VC.db-shm
+.vs/unlockfps/v16/Browse.VC.db-wal
+.vs/unlockfps/v16/ipch/AutoPCH/5de2f3ac3ce7c4c3/MAIN.ipch
+.vs/unlockfps/v16/.suo
